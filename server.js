@@ -38,7 +38,10 @@ dotenv.config();
 
 const app = express();
 const corsOptions = {
-    origin: 'https://project-beta-one-25.vercel.app', // Replace with your frontend URL
+    origin: [
+        'https://project-beta-one-25.vercel.app',
+        'https://natasha2429.github.io/project',
+    ], // List all allowed origins
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
