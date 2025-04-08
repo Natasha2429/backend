@@ -38,7 +38,7 @@ dotenv.config();
 
 const app = express();
 const corsOptions = {
-    origin: 'https://natasha2429.github.io/project/',
+    origin: 'https://project-beta-one-25.vercel.app/',
     methods: ['GET', 'POST'], 
     allowedHeaders: ['Content-Type', 'Authorization'], 
 };
