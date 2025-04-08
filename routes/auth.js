@@ -5,9 +5,9 @@ const User = require('../models/User');
 const app = express();
 const cors=require('cors');
 const corsOptions = {
-    origin: 'https://project-beta-one-25.vercel.app/',
-    methods: ['GET', 'POST'], 
-    allowedHeaders: ['Content-Type', 'Authorization'], 
+  origin: 'https://project-beta-one-25.vercel.app', // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
 app.use(cors(corsOptions));
