@@ -4,7 +4,14 @@ const multer = require('multer');
 const path = require('path');
 const Course = require('../models/Course');
 const router = express.Router();
+const app = express();
+const corsOptions = {
+    origin: 'https://natasha2429.github.io/project/',
+    methods: ['GET', 'POST'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+};
 
+app.use(cors(corsOptions));
 // Setup file upload
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {

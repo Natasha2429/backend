@@ -2,7 +2,14 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
+const app = express();
+const corsOptions = {
+    origin: 'https://natasha2429.github.io/project/',
+    methods: ['GET', 'POST'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+};
 
+app.use(cors(corsOptions));
 // Sign up route
 router.post('/signup', async (req, res) => {
   const { email, password } = req.body;
