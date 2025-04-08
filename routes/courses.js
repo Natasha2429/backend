@@ -5,6 +5,7 @@ const path = require('path');
 const Course = require('../models/Course');
 const router = express.Router();
 const app = express();
+const cors=require('cors');
 const corsOptions = {
     origin: 'https://natasha2429.github.io/project/',
     methods: ['GET', 'POST'], 

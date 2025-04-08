@@ -49,9 +49,12 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Connect MongoDB
-mongoose.connect("mongodb+srv://rayinatasha22csm:hyvJFJCJ7fBIZpBI@cluster0.y3kegcj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-    .then(() => console.log("MongoDB connected"))
-    .catch(err => console.error("MongoDB error:", err));
+mongoose.connect("mongodb+srv://rayinatasha22csm:T9g7wvYkqgHmJxo9@cluster0.saoeyfz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log("MongoDB connected"))
+.catch(err => console.error("MongoDB error:", err));
 
 // Routes
 const courseRoutes = require('./routes/courses');
@@ -62,7 +65,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
